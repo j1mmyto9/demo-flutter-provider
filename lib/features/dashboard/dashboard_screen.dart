@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/features/home/home_page.dart';
-import 'package:my_app/src/widget/helper/lifecycle_mixin.dart';
 import 'package:provider/provider.dart';
 
 import 'controller/tabbar_provider.dart';
@@ -10,7 +9,7 @@ class DashboardScreen extends StatefulWidget {
   _DashboardScreenState createState() => _DashboardScreenState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> with LifecycleMixin {
+class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -58,13 +57,5 @@ class _DashboardScreenState extends State<DashboardScreen> with LifecycleMixin {
             ));
       },
     );
-  }
-
-  @override
-  void onPause() {}
-
-  @override
-  void onResume() {
-    debugPrint('App resume call back');
   }
 }

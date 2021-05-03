@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/src/dialog/toast_service.dart';
+import 'package:get/get.dart';
 
-class HomeView extends StatefulWidget {
-  @override
-  _HomeViewState createState() => _HomeViewState();
-}
-
-class _HomeViewState extends State<HomeView> {
+class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +16,7 @@ class _HomeViewState extends State<HomeView> {
             TextButton(
                 child: const Text('Home'),
                 onPressed: () {
-                  Toast.showNoti('Home', 'Thanks for clicked');
+                  Get.rawSnackbar(message: 'Thanks for clicked');
                 }),
           ],
         ),
